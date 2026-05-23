@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+dashscope:
+  api-key: ${DASHSCOPE_API_KEY:}
+  model-name: ${DASHSCOPE_MODEL:qwen-plus}
+  temperature: 0.3
+  max-tokens: 8000
+
+workspace:
+  root: ${NOTE_AGENT_WORKSPACE:/workspace}
+  max-file-size-kb: 1024
+  output-dir: ${NOTE_AGENT_OUTPUT:/workspace/output}
+
+note-agent:
+  validation:
+    auto-fix-enabled: true
+    max-auto-fix-count: 1
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
