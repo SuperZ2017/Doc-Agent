@@ -5,12 +5,10 @@ import io.agentscope.core.ReActAgent;
 import io.agentscope.core.message.Msg;
 import io.agentscope.core.model.Model;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-@ConditionalOnMissingBean(AgentInvoker.class)
 public class AgentScopeAgentInvoker implements AgentInvoker {
 
     private final Model dashScopeChatModel;

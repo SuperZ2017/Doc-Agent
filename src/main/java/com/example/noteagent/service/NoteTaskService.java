@@ -40,7 +40,7 @@ public class NoteTaskService {
     private final ObjectMapper objectMapper;
 
     public NoteTaskResponse createTask(NoteTaskRequest request) {
-        NoteTaskSession session = NoteTaskSession.builder()
+        var session = NoteTaskSession.builder()
                 .taskId(UUID.randomUUID().toString())
                 .mode(request.getMode())
                 .status(TaskStatus.CREATED)
